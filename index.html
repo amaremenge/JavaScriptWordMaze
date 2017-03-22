@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Search Puzzles</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <style>
+        .Maze table {
+            border-collapse: collapse;
+        }
+
+        .Maze table, .Maze th, .Maze td {
+            border: solid 1px #c0c0c0;
+        }
+
+        .Maze th, .Maze td {
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #c0c0c0;
+        }
+
+        .selected {
+            color: #f00;
+            font-weight: bolder;
+        }
+
+        button {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Word Search Puzzles</h3>
+    <div class="row">
+        <div id="content" class="col-md-5">
+            <table id="mazeTable" class="Maze"></table>
+        </div>
+        <div class="col-md-3">
+            <ol id="keyWordList"></ol>
+        </div>
+    </div>
+
+    <div id="keyWordSelect" class="row">
+        <div class="btn-group">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropDownSelector" data-toggle="dropdown">
+                    Select...
+                    <span class="caret"></span>
+                </button>
+                <ul id="dropDownList" class="dropdown-menu"></ul>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button id="btnSubmit" class="btn btn-primary" type="button">Show Answer</button>
+        </div>
+        <div id="resetDiv" class="btn-group">
+            <button id="btnReset" class="btn btn-info" type="button">Clear</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="wordMaze.js"></script>
+</body>
+</html>
